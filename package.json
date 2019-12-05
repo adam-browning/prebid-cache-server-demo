@@ -1,0 +1,26 @@
+{
+  "name": "prebid-cache-server-demo",
+  "version": "1.0.0",
+  "description": "node.js cache server for prebid.js",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "node": "^13.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-browning/prebid-cache-server-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adam-browning/prebid-cache-server-demo/issues"
+  },
+  "homepage": "https://github.com/adam-browning/prebid-cache-server-demo#readme"
+}
