@@ -23,7 +23,7 @@
     "url": "https://github.com/adam-browning/prebid-cache-server-demo/issues"
   },
   "engines": {
-    "node": "9.3.0"
+    "node": "13.3.0"
   },
   "homepage": "https://github.com/adam-browning/prebid-cache-server-demo#readme"
 }
