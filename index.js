@@ -19,7 +19,7 @@ app.post('/',  (req, res) => {
 })
 //GET no params
 app.get('/',  (req, res) => {
-    if (!req.query.uuid) {
+    if (!req.query) {
         res.status(400).send("Missing required parameter uuid");
     }
 })
