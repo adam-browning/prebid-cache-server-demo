@@ -9,7 +9,6 @@ const myCache = new NodeCache();
 
 //POST
 app.post('/',  (req, res) => {
-
     const responses = new Array;
     for (item of req.body.puts) {
         const uuid = createId();
@@ -25,4 +24,4 @@ app.get('/',  (req, res) => {
     res.status(404).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
 })
 
-app.listen(3030);
+app.listen();
