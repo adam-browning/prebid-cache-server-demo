@@ -7,6 +7,16 @@ app.use(express.json());
 
 const myCache = new NodeCache();
 
+//GET
+app.get('/',  (req, res) => {
+    if (req.query === undefined) {
+        res.status(400).send("Missing required parameter uuid");
+    } else {
+        const val = myCache.get(req.query.uuid);
+        res.status(404).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
+    }
+});
+
 //POST
 app.post('/',  (req, res) => {
     const responses = new Array;
@@ -17,14 +27,5 @@ app.post('/',  (req, res) => {
     }
     res.status(200).json({responses});
 })
-//GET
-app.get('/',  (req, res) => {
-    if (!req.query) {
-        res.status(400).send("Missing required parameter uuid");
-    } else {
-        const val = myCache.get(req.query.uuid);
-        res.status(404).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
-    }
-});
 
 app.listen(process.env.PORT || 3000);
