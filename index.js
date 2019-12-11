@@ -17,11 +17,17 @@ app.post('/',  (req, res) => {
     }
     res.status(200).json({responses});
 })
-
-//GET by UUID
+//GET no params
 app.get('/',  (req, res) => {
-    const val = myCache.get(req.query.uuid);
-    res.status(404).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
+    if (!req.query.uuid) {
+        res.status(400).send("Missing required parameter uuid");
+    }
+})
+
+//GET UUID
+app.get('/',  (req, res) => {
+        const val = myCache.get(req.query.uuid);
+        res.status(400).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
 })
 
 app.listen(process.env.PORT || 3000);
