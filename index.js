@@ -4,6 +4,10 @@ const NodeCache = require( "node-cache" );
 const createId = require('uuid/v1');
 
 app.use(express.json());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 const myCache = new NodeCache();
 
