@@ -4,14 +4,19 @@
   "description": "node.js cache server for prebid.js",
   "main": "index.js",
   "dependencies": {
+    "@ajar/marker": "^1.2.3",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
-    "node": "^13.3.0"
+    "node": "^9.3.0",
+    "node-cache": "^5.1.0",
+    "uuid": "^3.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +28,9 @@
     "url": "https://github.com/adam-browning/prebid-cache-server-demo/issues"
   },
   "engines": {
-    "node": "13.3.0",
+    "node": "9.3.0",
     "npm": "6.13.1"
   },
-  "homepage": "https://github.com/adam-browning/prebid-cache-server-demo#readme"
+  "homepage": "https://github.com/adam-browning/prebid-cache-server-demo#readme",
+  "keywords": []
 }
