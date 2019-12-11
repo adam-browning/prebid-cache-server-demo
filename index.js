@@ -23,7 +23,7 @@ app.get('/',  (req, res) => {
         res.status(400).send("Missing required parameter uuid");
     } else {
         const val = myCache.get(req.query.uuid);
-        res.status(400).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
+        res.status(404).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
     }
 });
 
