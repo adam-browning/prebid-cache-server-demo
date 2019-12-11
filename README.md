@@ -1,8 +1,8 @@
 # prebid-cache-server-demo
 simple node.js cache server for prebid.js
 
-POST Example
-===========================
+//POST Example===========================
+
 POST / HTTP/1.1
 Host: localhost:3030
 Content-Type: application/json
@@ -26,6 +26,17 @@ cache-control: no-cache
     ]
 }
 
-GET ?uuid={{uuid_value}}
+//GET Example ===========================
 
-
+GET /?uuid=46896460-1c1d-11ea-b263-a5e9b0a042d5 HTTP/1.1
+Host: localhost:3030
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.20.1
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 38ca9941-c61d-4905-90c6-8123895eed9d,a5c6cac2-10e4-4621-a281-5e7c7f54798e
+Host: localhost:3030
+Accept-Encoding: gzip, deflate
+Content-Length: 1559
+Connection: keep-alive
+cache-control: no-cache
