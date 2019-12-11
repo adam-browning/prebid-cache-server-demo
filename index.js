@@ -9,8 +9,6 @@ app.use(cors());
 
 const myCache = new NodeCache();
 
-
-
 //POST
 app.post('/',  (req, res) => {
     const responses = new Array;
