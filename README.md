@@ -1,9 +1,15 @@
 # prebid-cache-server-demo
 simple node.js cache server for prebid.js
+- Post an object containing "puts" array of bid response objects and get a uuid for each
+- you will receive an object contating a "responses" array of all uuids
+- Get stored bid-response by passing a uuid query string parameter
 
-//POST Example===========================
+# Cache server URL on Heroku:
+https://perbid-cache-server-demo.herokuapp.com
 
-POST / HTTP/1.1
+# METHODS
+## POST Example:
+ POST / HTTP/1.1
 Host: localhost:3030
 Content-Type: application/json
 User-Agent: PostmanRuntime/7.20.1
@@ -26,8 +32,7 @@ cache-control: no-cache
     ]
 }
 
-//GET Example ===========================
-
+## GET Example:
 GET /?uuid=46896460-1c1d-11ea-b263-a5e9b0a042d5 HTTP/1.1
 Host: localhost:3030
 Content-Type: application/json
