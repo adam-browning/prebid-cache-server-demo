@@ -17,6 +17,13 @@ app.post('/',  (req, res) => {
     }
     res.status(200).json({responses});
 })
+//GET UUID
+app.get('/',  (req, res) => {
+    const val = myCache.get(req.query.uuid);
+    res.status(400).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
+})
+
+
 //GET no params
 app.get('/',  (req, res) => {
     if (!req.query) {
@@ -24,10 +31,5 @@ app.get('/',  (req, res) => {
     }
 })
 
-//GET UUID
-app.get('/',  (req, res) => {
-        const val = myCache.get(req.query.uuid);
-        res.status(400).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
-})
 
 app.listen(process.env.PORT || 3000);
