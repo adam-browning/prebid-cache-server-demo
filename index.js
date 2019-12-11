@@ -24,4 +24,4 @@ app.get('/',  (req, res) => {
     res.status(404).send(val ? val.value : "No content stored for uuid=" + req.query.uuid);
 })
 
-app.listen(80);
+app.listen(process.env.PORT || 3000);
