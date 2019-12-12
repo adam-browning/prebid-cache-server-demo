@@ -6,6 +6,7 @@ const createId = require('uuid/v1');
 
 app.use(express.json());
 app.use(cors());
+app.options('*', cors())
 
 const myCache = new NodeCache();
 

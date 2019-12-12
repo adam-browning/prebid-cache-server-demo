@@ -4,7 +4,6 @@
   "description": "node.js cache server for prebid.js",
   "main": "index.js",
   "dependencies": {
-    "@ajar/marker": "^1.2.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.9.1",
